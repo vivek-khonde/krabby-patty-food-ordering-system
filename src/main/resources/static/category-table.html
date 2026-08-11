@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header style="margin-top:80px; font-family: Arial, Helvetica, sans-serif;">
+  <nav style="padding:0;background:#fff;position:fixed;top:0;left:0;right:0;z-index:1030;box-shadow:2px -7px 13px 0px #000;display:flex;justify-content:center;align-items:center;">
+    <div style="width:85%;margin:0 auto;padding:0 15px;display:flex;align-items:center;justify-content:space-between;">
+      
+      <!-- Logo -->
+      <div class="logo" style="width:130px;">
+        <a href="/" title="Logo">
+          <img src="img/krabbypattylogo.png" alt="Logo" style="width:35%;max-width:200px;height:auto;">
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul style="list-style:none;margin:0;padding:0;display:flex;align-items:center;">
+        <!-- Admin Dashboard (Hidden initially) -->
+        <li id="admin-dashboard" style="padding:10px;font-weight:bold;display:none;">
+          <a href="/admin-dashboard.html" style="color:#44bd32;text-decoration:none;">Dashboard</a>
+        </li>
+        
+        <li id="nav-admin" style="padding:10px;font-weight:bold;">
+          <a href="/admin" style="color:#44bd32;text-decoration:none;">Admin</a>
+        </li>
+        
+        <li id="nav-category" style="padding:10px;font-weight:bold;">
+          <a href="/category-table.html" style="color:#44bd32;text-decoration:none;">Category</a>
+        </li>
+        <li id="nav-food" style="padding:10px;font-weight:bold;">
+          <a href="/food-table.html" style="color:#44bd32;text-decoration:none;">Food</a>
+        </li>
+        <li id="nav-order" style="padding:10px;font-weight:bold;">
+          <a href="/orders-table.html"" style="color:#44bd32;text-decoration:none;">Orders</a>
+        </li>
+
+        <!-- Login Link (Visible before login) -->
+        <li id="login-link" style="padding:10px;font-weight:bold;">
+          <a href="/login-form.html" style="color:#44bd32;text-decoration:none;">Login</a>
+        </li>
+        
+         <!-- <li id="shopping-cart-item" style="display:inline;padding:10px;font-weight:bold;position:relative;">
+                        <a id="shopping-cart" style="color:#6c5ce7;cursor:pointer;font-size:18px;">
+                            <i class="fa fa-cart-arrow-down"></i>
+                            <span style="color:#fff;background:#ff0000;font-size:12px;padding:2px 3px;border-radius:3px;">4</span>
+                        </a>
+                        <div style="background:#fff;width:440px;position:absolute;top:50px;right:0;box-shadow:0 4px 10px #bfbfbf;padding:10px;display:none;">
+          </div>  
+          </li>  -->             
+
+        <!-- User Dropdown (Hidden initially) -->
+        <li id="user-dropdown" style="padding:10px;font-weight:bold;display:none;position:relative;">
+        	<i class="fa-regular fa-circle-user me-1"></i>
+          <a href="#" id="user-name" style="color:#44bd32;text-decoration:none;"></a>
+          
+          <ul style="list-style:none;position:absolute;top:35px;left:0;background:#fff;padding:5px 10px;display:block;box-shadow:0 4px 10px #bfbfbf;">
+            <li><a href="#" id="logout-link">Logout</a></li>
+          </ul>
+        </li>
+
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+<section>
+  <div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+       <h2 class="text-center mb-4">Category</h2>
+        <form action="/add-category-form.html" method="get">
+          <!-- <div class="card card-sh mt-4"> -->
+            <div class="card-header text-center">
+              <button type="submit" class="fs-6 mb-0" 
+                      style="background:#44bd32; color:#fff; border-radius: 4px; border: none; outline: none; padding: 10px 10px;">
+                Add Category
+              </button>
+            </div>
+            <!-- </div> -->
+            </form>
+            <div class="card-body" style="margin-top:20px;">
+              <table class="table table-bordered" id="category-table">
+                <thead>
+                  <tr>
+                    <th>S.N</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>active</th>
+                    <th style="width:160px;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center" style="white-space:nowrap;">
+                      <button class="btn btn-sm btn-primary me-2">Edit</button>
+                      <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section Start -->
+<section style="overflow:hidden;background:rgba(8,8,8,0.85);color:#fff;">
+    <div style="width:85%;margin:0 auto;padding:15px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <div style="text-align:center;">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officia, temporibus expedita dicta eligendi harum architecto fugiat sint, laudantium omnis animi. Voluptas praesentium maiores minima pariatur necessitatibus consequuntur, similique assumenda.</p>
+        </div>
+        <div style="text-align:center;">
+            <h3>Site Map</h3>
+            <div>
+            	 <a href="/" style="display:block;margin:10px 0;color:#fff;text-decoration:none;">Home</a>
+                <a href="/categories" style="display:block;margin:10px 0;color:#fff;text-decoration:none;">Categories</a>
+                <a href="/foods" style="display:block;margin:10px 0;color:#fff;text-decoration:none;">Foods</a>
+                <a href="/order" style="display:block;margin:10px 0;color:#fff;text-decoration:none;">Order</a>
+
+                <a href="/login" style="display:block;margin:10px 0;color:#fff;text-decoration:none;">Login</a>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <h3>Social Links</h3>
+            <div>
+                <a href="#"><img src="https://img.icons8.com/color/48/null/facebook-new.png" style="width:32px;height:32px;margin:5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png" style="width:32px;height:32px;margin:5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/null/twitter--v1.png" style="width:32px;height:32px;margin:5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" style="width:32px;height:32px;margin:5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/null/youtube-play.png" style="width:32px;height:32px;margin:5px;"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Copyright Section -->
+<section style="overflow:hidden;background:#000;color:#fff;text-align:center;padding:10px;">
+    <p>All rights are reserved.</p>
+    <a id="back-to-top" style="position:fixed;bottom:40px;right:60px;font-size:16px;height:19px;width:40px;padding:10px 0;text-align:center;border-radius:5px;background:#44bd32;color:#fff;display:none;cursor:pointer;">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+</section>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/common.js"></script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "/api/categories",
+        type: "GET",
+        success: function(categories) {
+            let tbody = $("#category-table tbody");
+            tbody.empty(); // clear table first
+
+            categories.forEach(function(cat) {
+                let status = cat.active ? "Yes" : "No";
+                let img = cat.image ? `<img src='/uploads/${cat.image}' width='50'/>` : "";
+                
+                tbody.append(`
+                    <tr>
+                        <td>${cat.id}</td>
+                        <td>${cat.title}</td>
+                        <td>${img}</td>
+                        <td>${status}</td>
+                        <td class="text-center" style="white-space: nowrap;">
+                        <button type="button" class="btn btn-sm btn-warning me-2 edit-btn" style="color: #fff;" data-id="${cat.id}">Edit</button>
+                        <button type="button" class="btn btn-sm btn-danger me-2 delete-btn"  data-id="${cat.id}">Delete</button>
+                    </td>
+                    </tr>
+                `);
+            });
+        },
+        error: function(err) {
+            alert("Error fetching categories");
+            console.log(err);
+        }
+    });
+});
+//Handle Edit button click
+$(document).on('click', '.edit-btn', function() {
+    let catId = $(this).data('id');
+    
+    // Redirect to edit page (or open modal)
+    window.location.href = `/add-category-form.html?id=${catId}`;
+});
+
+
+
+// Handle Delete button click
+$(document).on('click', '.delete-btn', function() {
+    let catId = $(this).data('id');
+
+    if (confirm("Are you sure you want to delete this category?")) {
+        $.ajax({
+            url: `/api/categories/${catId}`,
+            type: 'DELETE',
+            success: function(response) {
+                alert("Category deleted successfully!");
+                // Remove the row from the table
+                $(`button.delete-btn[data-id='${catId}']`).closest('tr').remove();
+            },
+            error: function(err) {
+                alert("Error deleting category.");
+                console.log(err);
+            }
+        });
+    }
+});
+
+</script>
+
+</body>
+</html>
